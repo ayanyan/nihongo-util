@@ -67,7 +67,7 @@ nilでない引数が与えられたときは、逆に、標準句読点を非�
   (interactive "r\nP")
   (save-restriction
     (narrow-to-region from to)
-    (nu-normalize-kutoten-buffer reverse)))
+    (nu-kutoten-buffer reverse)))
 
 (defun nu-eisuu-region (from to)
   "リージョン内の英数記号を全てASCII文字に変換する。"
