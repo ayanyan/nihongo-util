@@ -74,6 +74,17 @@ nilでない引数が与えられたときは、逆に、標準句読点を非�
   (interactive "r")
   (japanese-hankaku-region from to 'ascii))
 
+(defun nu-unicode-region (from to)
+  "リージョン内の各文字をUnicodeのコードポイントとして表現する。"
+  (interactive "r")
+  (save-excursion
+    (save-restriction
+      (narrow-to-region from to)
+      (goto-char (point-min))
+      (while (< (point) (point-max))
+        (insert (format "\\u%x" (encode-char (char-after) 'unicode)))
+        (delete-char 1)))))
+
 (defun nu-region-ascii-p (from to)
   (interactive "r")
   (save-excursion
