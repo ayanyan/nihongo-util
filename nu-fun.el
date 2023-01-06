@@ -3,7 +3,7 @@
 
 ;;; Copyright (C) 2015 Yoshihiko Kakutani
 
-;;; Author: Yoshihiko Kakutani <yoshihiko.kakutani@gmail.com>
+;;; Author: Yoshihiko Kakutani
 
 ;;; Copyright Notice:
 
